@@ -1,93 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dakota Engineer</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manu M S Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #f1f1f1; background-color: #121212; scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; border-radius: 8px; transition: transform 0.3s; }
 
-        header {
-            background: #0e0e0e;
-            padding: 20px;
-            text-align: center;
-            color: white;
-            font-size: 28px;
-            letter-spacing: 1px;
-        }
+    /* Navigation */
+    nav { position: fixed; top: 0; width: 100%; background: rgba(31,31,31,0.95); display: flex; justify-content: center; z-index: 1000; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin: 0 15px; }
+    nav ul li a { padding: 15px 0; display: block; color: #f1f1f1; font-weight: 600; transition: color 0.3s; }
+    nav ul li a.active, nav ul li a:hover { color: #ff4081; }
 
-        .container {
-            max-width: 900px;
-            margin: 50px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
+    /* Sections */
+    section { padding: 100px 20px; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    
+    /* Hero Section with background image and overlay */
+    .hero {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('hero-background.jpg') no-repeat center center/cover;
+    }
+    .hero-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.5); /* overlay color and opacity */
+        z-index: 0;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 20px;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #ff4081; }
+    .hero h2 { font-size: 1.5rem; margin-bottom: 20px; font-weight: 400; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; color: #ddd; }
+    .contact-highlight { font-size: 1.1rem; margin-bottom: 20px; color: #ff4081; font-weight: bold; }
 
-        h2 {
-            margin-top: 0;
-            color: #333;
-        }
+    section h2 { font-size: 2rem; margin-bottom: 20px; color: #ff4081; text-align: center; }
 
-        p {
-            line-height: 1.6;
-            font-size: 18px;
-        }
+    #about p { max-width: 800px; margin: 0 auto; text-align: center; color: #ccc; }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0e0e0e;
-            color: #bbb;
-            margin-top: 50px;
-            font-size: 14px;
-        }
+    /* Services */
+    .services-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; }
+    .service-box { background: #1f1f1f; padding: 20px; border-radius: 8px; flex: 1 1 300px; transition: transform 0.3s; }
+    .service-box:hover { transform: translateY(-5px); }
+    .service-box h3 { margin-bottom: 15px; color: #ff4081; }
+    .service-box ul { list-style: disc inside; }
 
-        .btn {
-            display: inline-block;
-            background: #0078ff;
-            padding: 12px 20px;
-            color: white;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 15px;
-        }
+    /* Portfolio */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .portfolio-grid img { border: 3px solid #ff4081; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.5); transition: transform 0.3s, box-shadow 0.3s; }
+    .portfolio-grid img:hover { transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.7); }
 
-        .btn:hover {
-            background: #005fcc;
-        }
-    </style>
+    /* Rates/Contact */
+    .contact-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 50px; }
+    .rates, .contact-form { background: #1f1f1f; padding: 20px; border-radius: 8px; flex: 1 1 300px; }
+    .rates table { width: 100%; border-collapse: collapse; color: #ddd; }
+    .rates th, .rates td { padding: 10px; border: 1px solid #333; text-align: left; }
+    .contact-form form { display: flex; flex-direction: column; gap: 10px; }
+    .contact-form input, .contact-form textarea, .contact-form button { padding: 10px; border-radius: 5px; border: none; }
+    .contact-form button { background: #ff4081; color: #fff; font-weight: 600; cursor: pointer; transition: background 0.3s; }
+    .contact-form button:hover { background: #e73370; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #1a1a1a; margin-top: 50px; }
+    footer a { margin: 0 10px; color: #ff4081; }
+
+    @media(max-width: 768px) {
+        .services-container, .contact-container { flex-direction: column; align-items: center; }
+    }
+</style>
 </head>
 <body>
 
-<header>
-    Dakota Engineer
-</header>
+<!-- Navigation -->
+<nav>
+    <ul>
+        <li><a href="#hero" class="nav-link active">HOME</a></li>
+        <li><a href="#about" class="nav-link">ABOUT</a></li>
+        <li><a href="#services" class="nav-link">SERVICES</a></li>
+        <li><a href="#portfolio" class="nav-link">PORTFOLIO</a></li>
+        <li><a href="#contact" class="nav-link">CONTACT</a></li>
+    </ul>
+</nav>
 
-<div class="container">
-    <h2>Welcome to My Website</h2>
-    <p>
-        This is a demo website hosted for free using <strong>GitHub Pages</strong>.
-        You can edit this page anytime and add your own images, pages, and content.
-    </p>
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Manu M S</h1>
+        <h2>Content Creator | Event Manager | Web Builder</h2>
+        <p class="contact-highlight">Phone: +91 98765 43210 | Email: creative.engineer.contact@email.com</p>
+        <p>Blending creativity, technical skills, and event management expertise to deliver photography, decoration, and web solutions that make experiences unforgettable.</p>
+    </div>
+</section>
 
-    <p>
-        Replace this text with your real homepage later — business info, portfolio, photos, services, 
-        YouTube links, anything.
-    </p>
+<!-- About Me -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>I am a versatile professional: a Content Creator, Event Manager, and Web Builder. I combine technical knowledge with creative flair to provide photography services, event decoration, and web development projects tailored to client needs.</p>
+</section>
 
-    <a href="#" class="btn">Learn More</a>
-</div>
+<!-- Services -->
+<section id="services">
+    <h2>Services</h2>
+    <div class="services-container">
+        <div class="service-box">
+            <h3>Photography & Creative</h3>
+            <ul>
+                <li>Pre-Wedding</li>
+                <li>Wedding</li>
+                <li>Portrait</li>
+                <li>Commercial</li>
+                <li>Birthday</li>
+                <li>Event Management</li>
+                <li>Decoration</li>
+            </ul>
+        </div>
+        <div class="service-box">
+            <h3>Technical & Web</h3>
+            <ul>
+                <li>Basic Billing Web Pages</li>
+                <li>Personal Portfolio Website Development</li>
+            </ul>
+        </div>
+    </div>
+</section>
 
+<!-- Portfolio -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio-grid">
+        <!-- Decoration Images -->
+        <img src="placeholder-decoration-1.jpg" alt="Decoration 1">
+        <img src="placeholder-decoration-2.jpg" alt="Decoration 2">
+        <img src="placeholder-decoration-3.jpg" alt="Decoration 3">
+        <img src="placeholder-decoration-4.jpg" alt="Decoration 4">
+        <img src="placeholder-decoration-5.jpg" alt="Decoration 5">
+        <img src="placeholder-decoration-6.jpg" alt="Decoration 6">
+        <img src="placeholder-decoration-7.jpg" alt="Decoration 7">
+        <img src="placeholder-decoration-8.jpg" alt="Decoration 8">
+        <img src="placeholder-decoration-9.jpg" alt="Decoration 9">
+        <img src="placeholder-decoration-10.jpg" alt="Decoration 10">
+        <!-- Photography Images -->
+        <img src="placeholder-portrait-1.jpg" alt="Portrait 1">
+        <img src="placeholder-portrait-2.jpg" alt="Portrait 2">
+        <img src="placeholder-commercial-1.jpg" alt="Commercial 1">
+        <img src="placeholder-commercial-2.jpg" alt="Commercial 2">
+    </div>
+</section>
+
+<!-- Rates / Contact -->
+<section id="contact">
+    <h2>Contact & Rates</h2>
+    <div class="contact-container">
+        <div class="rates">
+            <h3>Billing / Rates</h3>
+            <table>
+                <tr>
+                    <th>Equipment / Service</th>
+                    <th>Hourly Rate</th>
+                    <th>Daily Rate</th>
+                </tr>
+                <tr>
+                    <td>Mics / Equipment</td>
+                    <td>₹500</td>
+                    <td>₹3500</td>
+                </tr>
+                <tr>
+                    <td>Studio Space</td>
+                    <td>₹1000</td>
+                    <td>₹7000</td>
+                </tr>
+            </table>
+        </div>
+        <div class="contact-form">
+            <h3>Contact Form</h3>
+            <form>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="subject" placeholder="Subject" required>
+                <textarea name="message" rows="5" placeholder="Message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
-    © 2025 Dakota Engineer — All Rights Reserved
+    <p>&copy; 2025 Manu M S. All Rights Reserved.</p>
+    <a href="#">FB</a>
+    <a href="#">IG</a>
+    <a href="#">TW</a>
+    <a href="#">LN</a>
 </footer>
+
+<script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 80;
+            if(pageYOffset >= sectionTop) current = section.getAttribute("id");
+        });
+        navLinks.forEach(link => {
+            link.classList.remove("active");
+            if(link.getAttribute("href").includes(current)) link.classList.add("active");
+        });
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", e => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href").substring(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
+        });
+    });
+</script>
 
 </body>
 </html>
