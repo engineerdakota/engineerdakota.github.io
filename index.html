@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Content Creator & Events Business</title>
+    <title>Portfolio | Content Creator & Businessman</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2a5caa;
-            --secondary-color: #f8c630;
-            --dark-color: #1a1a2e;
-            --light-color: #f8f9fa;
-            --gray-color: #6c757d;
+            --primary-color: #d32f2f;
+            --secondary-color: #ffd600;
+            --dark-color: #121212;
+            --darker-color: #0a0a0a;
+            --light-color: #f5f5f5;
+            --gray-color: #a0a0a0;
+            --card-bg: #1e1e1e;
             --transition: all 0.3s ease;
         }
 
@@ -31,8 +33,9 @@
         body {
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
-            color: var(--dark-color);
-            background-color: var(--light-color);
+            color: var(--light-color);
+            background-color: var(--darker-color);
+            overflow-x: hidden;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -83,9 +86,9 @@
         }
 
         .btn:hover {
-            background-color: #1e4a8a;
+            background-color: #b71c1c;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
         }
 
         .btn-secondary {
@@ -94,7 +97,7 @@
         }
 
         .btn-secondary:hover {
-            background-color: #e0b329;
+            background-color: #ffc400;
         }
 
         /* Header & Navigation */
@@ -103,8 +106,8 @@
             top: 0;
             left: 0;
             width: 100%;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(18, 18, 18, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
             z-index: 1000;
             transition: var(--transition);
         }
@@ -118,13 +121,13 @@
 
         .logo {
             font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
+            font-weight: 800;
+            color: var(--secondary-color);
             text-decoration: none;
         }
 
         .logo span {
-            color: var(--secondary-color);
+            color: var(--primary-color);
         }
 
         .nav-menu {
@@ -138,25 +141,26 @@
 
         .nav-menu a {
             text-decoration: none;
-            color: var(--dark-color);
+            color: var(--light-color);
             font-weight: 500;
             transition: var(--transition);
         }
 
         .nav-menu a:hover {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .hamburger {
             display: none;
             cursor: pointer;
             font-size: 1.5rem;
+            color: var(--light-color);
         }
 
         /* Hero Section */
         .hero {
             padding-top: 150px;
-            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -165,11 +169,11 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 20px;
-            color: var(--dark-color);
+            color: var(--light-color);
         }
 
         .hero h1 span {
-            color: var(--primary-color);
+            color: var(--secondary-color);
         }
 
         .hero p {
@@ -198,7 +202,7 @@
             flex: 1;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
         }
 
         .about-image img {
@@ -217,7 +221,7 @@
         }
 
         .about-text h3 {
-            color: var(--primary-color);
+            color: var(--secondary-color);
             font-size: 1.8rem;
         }
 
@@ -233,11 +237,12 @@
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
+            color: var(--light-color);
         }
 
         .skill-bar {
             height: 10px;
-            background-color: #e0e0e0;
+            background-color: #333;
             border-radius: 5px;
             overflow: hidden;
         }
@@ -250,7 +255,7 @@
 
         /* Services Section */
         .services {
-            background-color: #f8f9fa;
+            background-color: var(--dark-color);
         }
 
         .services-grid {
@@ -260,16 +265,18 @@
         }
 
         .service-card {
-            background-color: white;
+            background-color: var(--card-bg);
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: var(--transition);
+            border: 1px solid #333;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(211, 47, 47, 0.2);
+            border-color: var(--primary-color);
         }
 
         .service-icon {
@@ -295,6 +302,7 @@
             border-radius: 30px;
             cursor: pointer;
             transition: var(--transition);
+            font-weight: 500;
         }
 
         .filter-btn.active, .filter-btn:hover {
@@ -311,14 +319,18 @@
         .portfolio-item {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             transition: var(--transition);
             position: relative;
+            cursor: pointer;
+            background-color: var(--card-bg);
+            border: 1px solid #333;
         }
 
         .portfolio-item:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(211, 47, 47, 0.2);
+            border-color: var(--primary-color);
         }
 
         .portfolio-item img {
@@ -330,7 +342,308 @@
 
         .portfolio-info {
             padding: 20px;
-            background-color: white;
+        }
+
+        .portfolio-info h3 {
+            color: var(--secondary-color);
+        }
+
+        .portfolio-info p {
+            color: var(--gray-color);
+            margin-bottom: 10px;
+        }
+
+        .portfolio-info small {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1100;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 50px auto;
+            max-width: 1200px;
+            width: 90%;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            animation: modalFade 0.3s ease;
+            border: 1px solid #333;
+        }
+
+        @keyframes modalFade {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-header {
+            padding: 25px 30px 15px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--dark-color);
+        }
+
+        .modal-header h2 {
+            margin: 0;
+            color: var(--secondary-color);
+        }
+
+        .close-modal {
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--gray-color);
+            transition: var(--transition);
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        /* YouTube Videos Gallery */
+        .videos-container {
+            margin-bottom: 40px;
+        }
+
+        .video-description {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--dark-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .video-description h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .video-description p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .video-item {
+            background-color: var(--dark-color);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            border: 1px solid #333;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(211, 47, 47, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(211, 47, 47, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .video-thumbnail:hover .play-icon {
+            opacity: 1;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: var(--light-color);
+        }
+
+        .video-info p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+            margin-bottom: 10px;
+        }
+
+        .watch-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .watch-btn:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Image Gallery */
+        .gallery-container {
+            margin-bottom: 40px;
+        }
+
+        .gallery-description {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: var(--dark-color);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .gallery-description h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .price-info {
+            background-color: rgba(255, 214, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 214, 0, 0.3);
+        }
+
+        .price-info h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .price-info ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .price-info li {
+            margin-bottom: 8px;
+            color: var(--gray-color);
+        }
+
+        .price-info strong {
+            color: var(--secondary-color);
+        }
+
+        .price-tag {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-image {
+            border-radius: 8px;
+            overflow: hidden;
+            height: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            border: 1px solid #333;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(211, 47, 47, 0.2);
+            border-color: var(--primary-color);
+        }
+
+        .gallery-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Database Services Section */
+        .database-services {
+            background-color: var(--dark-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .database-services h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .service-list-item {
+            background-color: var(--darker-color);
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #333;
+        }
+
+        .service-list-item h4 {
+            color: var(--secondary-color);
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+
+        .service-list-item p {
+            color: var(--gray-color);
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -368,23 +681,32 @@
         .form-group textarea {
             width: 100%;
             padding: 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #333;
             border-radius: 5px;
             font-family: 'Poppins', sans-serif;
             transition: var(--transition);
+            background-color: var(--card-bg);
+            color: var(--light-color);
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.2);
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: #666;
         }
 
         /* Footer */
         footer {
-            background-color: var(--dark-color);
+            background-color: var(--darker-color);
             color: white;
             padding: 60px 0 30px;
+            border-top: 1px solid #333;
         }
 
         .footer-content {
@@ -483,6 +805,14 @@
             .contact-content {
                 flex-direction: column;
             }
+            
+            .videos-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .images-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
         }
 
         @media (max-width: 768px) {
@@ -496,10 +826,10 @@
                 left: -100%;
                 width: 100%;
                 flex-direction: column;
-                background-color: white;
+                background-color: var(--dark-color);
                 text-align: center;
                 transition: 0.3s;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
                 padding: 20px 0;
             }
             
@@ -518,6 +848,11 @@
             .section {
                 padding: 60px 0;
             }
+            
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+            }
         }
 
         @media (max-width: 576px) {
@@ -531,6 +866,14 @@
             
             .section-title {
                 font-size: 1.8rem;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .images-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
             }
         }
     </style>
@@ -672,53 +1015,808 @@
                 <button class="filter-btn" data-filter="content">Content Creation</button>
                 <button class="filter-btn" data-filter="events">Events</button>
                 <button class="filter-btn" data-filter="photo">Photography</button>
+                <button class="filter-btn" data-filter="database">Database</button>
             </div>
             <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="content">
+                <!-- Travel Vlog Series -->
+                <div class="portfolio-item" data-category="content" data-project="travel-vlog">
                     <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Travel Vlog">
                     <div class="portfolio-info">
                         <h3>Travel Vlog Series</h3>
                         <p>Exploring hidden gems across the country</p>
+                        <p><small>Click to view latest videos and details</small></p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="events">
+                
+                <!-- Wedding Decoration -->
+                <div class="portfolio-item" data-category="events" data-project="wedding-decoration">
                     <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Event Decoration">
                     <div class="portfolio-info">
                         <h3>Wedding Decoration</h3>
                         <p>Complete event styling and decoration</p>
+                        <p><small>Click to view gallery and pricing</small></p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="photo">
+                
+                <!-- Pre-Wedding Shoot -->
+                <div class="portfolio-item" data-category="photo" data-project="pre-wedding">
                     <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pre-Wedding Shoot">
                     <div class="portfolio-info">
                         <h3>Pre-Wedding Photoshoot</h3>
                         <p>Romantic outdoor pre-wedding session</p>
+                        <p><small>Click to view gallery and packages</small></p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="content">
+                
+                <!-- Motovlog Adventure -->
+                <div class="portfolio-item" data-category="content" data-project="motovlog">
                     <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Motovlog">
                     <div class="portfolio-info">
                         <h3>Motovlog Adventure</h3>
                         <p>Motorcycle journey through mountain roads</p>
+                        <p><small>Click to view latest videos and details</small></p>
                     </div>
                 </div>
-                <div class="portfolio-item" data-category="events">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Corporate Event">
-                    <div class="portfolio-info">
-                        <h3>Corporate Event</h3>
-                        <p>Annual conference with complete management</p>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="photo">
+                
+                <!-- Product Photography -->
+                <div class="portfolio-item" data-category="photo" data-project="product-photography">
                     <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Product Photography">
                     <div class="portfolio-info">
                         <h3>Product Photography</h3>
                         <p>Commercial product shots for advertising</p>
+                        <p><small>Click to view portfolio and pricing</small></p>
+                    </div>
+                </div>
+                
+                <!-- Database Management -->
+                <div class="portfolio-item" data-category="database" data-project="database-management">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Database Management">
+                    <div class="portfolio-info">
+                        <h3>Database Management</h3>
+                        <p>Enterprise database optimization and administration</p>
+                        <p><small>Click to view services and case studies</small></p>
+                    </div>
+                </div>
+                
+                <!-- Ad Shooting -->
+                <div class="portfolio-item" data-category="content" data-project="ad-shooting">
+                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ad Shooting">
+                    <div class="portfolio-info">
+                        <h3>Commercial Ad Shooting</h3>
+                        <p>Professional advertisement video production</p>
+                        <p><small>Click to view portfolio and details</small></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Project Modals -->
+    
+    <!-- Travel Vlog Series Modal -->
+    <div class="modal" id="travel-vlog-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Travel Vlog Series</h2>
+                <div class="close-modal" data-modal="travel-vlog-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="video-description">
+                    <h3>About My Travel Vlogging Journey</h3>
+                    <p>I create engaging travel vlogs that showcase hidden gems, local cultures, and breathtaking landscapes from around the world. My content focuses on authentic experiences, practical travel tips, and storytelling that transports viewers to each destination. With over 50 travel vlogs published, I've covered destinations across 15 countries, building a community of travel enthusiasts who follow my adventures.</p>
+                    <p>My travel vlogs combine cinematic visuals, informative commentary, and personal experiences to create content that inspires others to explore the world. I handle everything from filming and editing to SEO optimization and community engagement.</p>
+                </div>
+                
+                <div class="videos-container">
+                    <h3>Latest Travel Vlogs</h3>
+                    <div class="videos-grid">
+                        <!-- Video 1 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Adventure">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Himalayan Trekking Adventure</h4>
+                                <p>Exploring remote Himalayan villages and breathtaking mountain views in this 7-day trekking journey.</p>
+                                <a href="https://youtube.com/watch?v=example1" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 2 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach Paradise">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Hidden Beaches of Thailand</h4>
+                                <p>Discovering secluded beaches and crystal clear waters away from tourist crowds in Southern Thailand.</p>
+                                <a href="https://youtube.com/watch?v=example2" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 3 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desert Journey">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>24 Hours in Dubai Desert</h4>
+                                <p>Camping under the stars, dune bashing, and experiencing Bedouin culture in the Arabian desert.</p>
+                                <a href="https://youtube.com/watch?v=example3" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 4 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="City Exploration">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Tokyo Street Food Tour</h4>
+                                <p>Eating our way through Tokyo's best street food spots, from Tsukiji Market to Shinjuku alleyways.</p>
+                                <a href="https://youtube.com/watch?v=example4" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 5 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Road Trip">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Pacific Coast Highway Road Trip</h4>
+                                <p>The ultimate California coastal drive from San Francisco to Los Angeles with epic stops along the way.</p>
+                                <a href="https://youtube.com/watch?v=example5" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 6 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Northern Lights">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Chasing Northern Lights in Norway</h4>
+                                <p>Traveling to Arctic Norway in winter to witness and film the spectacular Aurora Borealis.</p>
+                                <a href="https://youtube.com/watch?v=example6" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 7 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Temple Visit">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Ancient Temples of Cambodia</h4>
+                                <p>Exploring the magnificent Angkor Wat complex and lesser-known temples in Siem Reap.</p>
+                                <a href="https://youtube.com/watch?v=example7" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 8 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="European Castle">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Fairytale Castles of Germany</h4>
+                                <p>Visiting Neuschwanstein, Hohenzollern, and other magical castles along Germany's Romantic Road.</p>
+                                <a href="https://youtube.com/watch?v=example8" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 9 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1534008897995-27a23e859048?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wildlife Safari">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Safari in Tanzania's Serengeti</h4>
+                                <p>Witnessing the Great Migration and incredible wildlife in one of Africa's most famous national parks.</p>
+                                <a href="https://youtube.com/watch?v=example9" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Video 10 -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1465311354905-789ff5f7a457?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Island Paradise">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Philippine Island Hopping Adventure</h4>
+                                <p>Exploring Palawan's stunning lagoons, Coron's shipwrecks, and Boracay's white sand beaches.</p>
+                                <a href="https://youtube.com/watch?v=example10" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wedding Decoration Modal -->
+    <div class="modal" id="wedding-decoration-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Wedding Decoration Services</h2>
+                <div class="close-modal" data-modal="wedding-decoration-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-description">
+                    <h3>Complete Wedding Decoration & Styling</h3>
+                    <p>I provide comprehensive wedding decoration services that transform venues into magical spaces reflecting each couple's unique love story. From intimate backyard ceremonies to grand ballroom receptions, I handle every detail to create unforgettable atmospheres. My expertise includes floral arrangements, lighting design, fabric draping, table settings, and thematic decor that brings your vision to life.</p>
+                    <p>With over 100 weddings decorated, I understand how to balance aesthetics, budget, and practical considerations to ensure your special day is as beautiful as it is smoothly executed.</p>
+                    
+                    <div class="price-info">
+                        <h4>Wedding Decoration Packages</h4>
+                        <ul>
+                            <li><strong>Basic Package ($1,500)</strong> - Ceremony backdrop, aisle decor, simple centerpieces, basic lighting</li>
+                            <li><strong>Standard Package ($3,000)</strong> - Full ceremony & reception decor, premium floral arrangements, advanced lighting, fabric draping</li>
+                            <li><strong>Premium Package ($5,000+)</strong> - Complete venue transformation, custom installations, luxury flowers, thematic design, photobooth setup</li>
+                            <li><strong>Custom Package</strong> - Tailored to your specific vision and requirements with personalized consultation</li>
+                        </ul>
+                        <p class="price-tag">Contact for personalized quote based on your specific requirements</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-container">
+                    <h3>Wedding Decoration Portfolio</h3>
+                    <div class="images-grid">
+                        <!-- 20 images total -->
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wedding Arch"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Table Setting"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Floral Centerpiece"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Aisle Decor"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Reception Decor"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cake Table"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Outdoor Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ceiling Draping"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lighting Design"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Entrance Decor"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sweetheart Table"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Floral Installations"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Backyard Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ballroom Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rustic Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Winter Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Thematic Wedding"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pre-Wedding Shoot Modal -->
+    <div class="modal" id="pre-wedding-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Pre-Wedding Photoshoot Services</h2>
+                <div class="close-modal" data-modal="pre-wedding-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-description">
+                    <h3>Romantic Pre-Wedding Photography</h3>
+                    <p>I specialize in creating beautiful, natural, and romantic pre-wedding photoshoots that capture the unique love story of each couple. My approach focuses on genuine moments, emotional connections, and stunning visuals that you'll treasure forever. Whether you prefer scenic outdoor locations, urban backdrops, or intimate studio settings, I work with you to create images that reflect your personality and relationship.</p>
+                    <p>With years of experience in couple photography, I guide you through the entire process—from location selection and outfit coordination to posing naturally and capturing authentic emotions.</p>
+                    
+                    <div class="price-info">
+                        <h4>Pre-Wedding Photoshoot Packages</h4>
+                        <ul>
+                            <li><strong>Basic Session ($800)</strong> - 2-hour shoot, 1 location, 50 edited high-resolution photos, online gallery</li>
+                            <li><strong>Premium Session ($1,500)</strong> - 4-hour shoot, 2 locations, 150 edited photos, print album, outfit consultation</li>
+                            <li><strong>Luxury Experience ($2,500)</strong> - Full day shoot, multiple locations, 300+ edited photos, premium album, makeup artist, video highlights</li>
+                            <li><strong>Destination Package ($3,500+)</strong> - Travel to your preferred destination, full coverage, cinematic video, luxury album</li>
+                        </ul>
+                        <p class="price-tag">Custom packages available for specific requirements</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-container">
+                    <h3>Pre-Wedding Portfolio</h3>
+                    <div class="images-grid">
+                        <!-- 15 images for pre-wedding -->
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beach Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forest Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1520854221256-17463ccb8b9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunset Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1529254479751-fbacb4c7a587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Traditional Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Garden Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Winter Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lakeside Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0e4a6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Historic Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rainy Day Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Autumn Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1520854221256-17463ccb8b9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Studio Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1539635278303-d4002c07eae3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Adventure Pre-Wedding"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1529254479751-fbacb4c7a587?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sunrise Pre-Wedding"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motovlog Adventure Modal -->
+    <div class="modal" id="motovlog-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Motovlog Adventure Series</h2>
+                <div class="close-modal" data-modal="motovlog-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="video-description">
+                    <h3>About My Motovlogging Journey</h3>
+                    <p>I combine my passion for motorcycles with content creation to produce thrilling motovlogs that take viewers on adrenaline-filled journeys through scenic routes, challenging terrains, and exciting motorcycle events. My motovlogs feature bike reviews, riding techniques, gear recommendations, and epic road trip adventures captured with helmet cameras and drone footage.</p>
+                    <p>With a focus on both entertainment and education, I share insights about motorcycle maintenance, safety tips, and the freedom of two-wheel travel, building a community of fellow riders and adventure enthusiasts.</p>
+                </div>
+                
+                <div class="videos-container">
+                    <h3>Latest Motovlogs</h3>
+                    <div class="videos-grid">
+                        <!-- 10 motovlog videos -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Himalayan Motorcycle Expedition</h4>
+                                <p>Conquering high-altitude passes and remote mountain roads on a 15-day motorcycle journey.</p>
+                                <a href="https://youtube.com/watch?v=moto1" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Desert Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Desert Dune Bashing on Dirt Bike</h4>
+                                <p>Mastering sand dunes and off-road challenges in the Rajasthan desert with expert riding techniques.</p>
+                                <a href="https://youtube.com/watch?v=moto2" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1519708291405-e8d53e6f4a15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Coastal Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Coastal Highway Cruise</h4>
+                                <p>Riding along breathtaking coastal roads with ocean views and perfect riding weather.</p>
+                                <a href="https://youtube.com/watch?v=moto3" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Night Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Night Riding Safety & Techniques</h4>
+                                <p>Essential tips for safe nighttime riding with proper gear and visibility considerations.</p>
+                                <a href="https://youtube.com/watch?v=moto4" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1566891438107-8d0dab70b1e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bike Review">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Royal Enfield Himalayan Review</h4>
+                                <p>Comprehensive review after 5000km of touring on the perfect adventure motorcycle.</p>
+                                <a href="https://youtube.com/watch?v=moto5" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1571607388263-1044f9ea01dd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>500km Group Ride Adventure</h4>
+                                <p>Joining 50 riders for an epic weekend group ride through mountains and valleys.</p>
+                                <a href="https://youtube.com/watch?v=moto6" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rain Ride">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Monsoon Riding Challenges</h4>
+                                <p>Navigating slippery roads and heavy rainfall while maintaining safety and control.</p>
+                                <a href="https://youtube.com/watch?v=moto7" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Track Day">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Racetrack Experience Day</h4>
+                                <p>Pushing limits on a professional racetrack with performance riding techniques.</p>
+                                <a href="https://youtube.com/watch?v=moto8" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gear Review">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Motorcycle Gear Essentials Guide</h4>
+                                <p>Complete breakdown of must-have riding gear for safety and comfort.</p>
+                                <a href="https://youtube.com/watch?v=moto9" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1519708291405-e8d53e6f4a15?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Long Tour">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>30-Day Cross Country Tour</h4>
+                                <p>Epic journey covering 5000km across diverse landscapes and cultural experiences.</p>
+                                <a href="https://youtube.com/watch?v=moto10" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Photography Modal -->
+    <div class="modal" id="product-photography-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Product Photography Services</h2>
+                <div class="close-icon" data-modal="product-photography-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="gallery-description">
+                    <h3>Professional Product Photography</h3>
+                    <p>I specialize in creating stunning product photography that elevates brands and drives sales. With expertise in lighting, composition, and post-processing, I transform ordinary products into compelling visual assets. My services include e-commerce photography, lifestyle product shots, packshot photography, and creative campaign imagery.</p>
+                    <p>Using professional studio equipment and advanced editing techniques, I ensure your products look their absolute best across all platforms—from websites and social media to print catalogs and advertisements.</p>
+                    
+                    <div class="price-info">
+                        <h4>Product Photography Packages</h4>
+                        <ul>
+                            <li><strong>Basic Package ($300)</strong> - 10 product shots, white background, basic editing, 2-day delivery</li>
+                            <li><strong>Standard Package ($700)</strong> - 30 product shots, multiple angles, lifestyle context, advanced editing, 5-day delivery</li>
+                            <li><strong>Premium Package ($1,500)</strong> - 75+ product shots, creative concepts, model integration, video content, 10-day delivery</li>
+                            <li><strong>E-commerce Bulk ($2,500)</strong> - 200+ product images, consistent style, catalog organization, priority delivery</li>
+                        </ul>
+                        <p class="price-tag">Custom quotes for specific product types and quantities</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-container">
+                    <h3>Product Photography Portfolio</h3>
+                    <div class="images-grid">
+                        <!-- 15 product photography images -->
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cosmetic Products"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sportswear"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Electronics"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Food Products"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Watches"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1560343090-f0409e92791a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Apparel"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Home Decor"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Footwear"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beauty Products"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Phones"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Headphones"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Luxury Items"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Beverages"></div>
+                        <div class="gallery-image"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Accessories"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Database Management Modal -->
+    <div class="modal" id="database-management-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Database Administration Services</h2>
+                <div class="close-modal" data-modal="database-management-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="database-services">
+                    <h3>Professional Database Management & Optimization</h3>
+                    <p>With extensive experience as a Database Administrator, I provide comprehensive database solutions for businesses of all sizes. My expertise spans database design, performance tuning, security implementation, backup strategies, and migration projects. I work with various database systems including MySQL, PostgreSQL, MongoDB, and SQL Server.</p>
+                    <p>I help organizations optimize their data infrastructure for reliability, scalability, and performance while ensuring data integrity and security compliance.</p>
+                    
+                    <div class="price-info">
+                        <h4>Database Services Pricing</h4>
+                        <ul>
+                            <li><strong>Consultation & Audit ($500/day)</strong> - Database health check, performance analysis, security assessment</li>
+                            <li><strong>Optimization Package ($2,000)</strong> - Query optimization, indexing strategy, configuration tuning</li>
+                            <li><strong>Migration Project ($3,500+)</strong> - Complete database migration with minimal downtime and data integrity</li>
+                            <li><strong>Managed Services ($1,500/month)</strong> - Ongoing monitoring, maintenance, backups, and support</li>
+                            <li><strong>Custom Development ($100/hour)</strong> - Custom database solutions, ETL processes, reporting systems</li>
+                        </ul>
+                        <p class="price-tag">Contact for project-based quotes and long-term agreements</p>
+                    </div>
+                </div>
+                
+                <div class="database-services">
+                    <h3>Database Services Portfolio</h3>
+                    <div class="service-list">
+                        <div class="service-list-item">
+                            <h4>Performance Tuning</h4>
+                            <p>Optimizing query performance, indexing strategies, and server configurations for maximum efficiency.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Database Design</h4>
+                            <p>Creating efficient, scalable database architectures tailored to specific business requirements.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Security Implementation</h4>
+                            <p>Implementing robust security measures including encryption, access controls, and audit trails.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Backup & Recovery</h4>
+                            <p>Designing comprehensive backup strategies and disaster recovery plans for data protection.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Migration Services</h4>
+                            <p>Seamless database migration between platforms with minimal downtime and data integrity.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Monitoring & Maintenance</h4>
+                            <p>Proactive monitoring, regular maintenance, and performance reporting for database systems.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Cloud Database Management</h4>
+                            <p>Managing and optimizing cloud-based database solutions (AWS RDS, Azure SQL, Google Cloud SQL).</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Data Warehousing</h4>
+                            <p>Designing and implementing data warehouse solutions for business intelligence and analytics.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="database-services">
+                    <h3>Case Studies & Success Stories</h3>
+                    <div class="service-list">
+                        <div class="service-list-item">
+                            <h4>E-commerce Platform Optimization</h4>
+                            <p>Improved database performance by 300% for a major e-commerce platform, reducing page load times from 5s to 1.5s.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Financial Institution Migration</h4>
+                            <p>Successfully migrated a financial institution's database from legacy system to modern cloud infrastructure with zero data loss.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>SaaS Application Scaling</h4>
+                            <p>Designed and implemented a scalable database architecture supporting 1M+ users for a growing SaaS company.</p>
+                        </div>
+                        <div class="service-list-item">
+                            <h4>Healthcare Data Security</h4>
+                            <p>Implemented HIPAA-compliant security measures for a healthcare provider's patient database system.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ad Shooting Modal -->
+    <div class="modal" id="ad-shooting-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Commercial Advertisement Production</h2>
+                <div class="close-modal" data-modal="ad-shooting-modal">&times;</div>
+            </div>
+            <div class="modal-body">
+                <div class="video-description">
+                    <h3>Professional Advertisement Video Production</h3>
+                    <p>I specialize in creating high-impact commercial advertisements that capture attention, communicate brand messages effectively, and drive consumer action. From concept development to final delivery, I handle every aspect of ad production—including scripting, storyboarding, filming, editing, and post-production effects.</p>
+                    <p>My experience spans various ad formats including TV commercials, social media ads, product demonstration videos, brand storytelling, and promotional content for diverse industries.</p>
+                    
+                    <div class="price-info">
+                        <h4>Advertisement Production Packages</h4>
+                        <ul>
+                            <li><strong>Basic Ad ($2,000)</strong> - 30-second social media ad, single location, basic editing, 1-week production</li>
+                            <li><strong>Standard Commercial ($5,000)</strong> - 60-second TV commercial, 2 locations, professional editing, voiceover, 2-week production</li>
+                            <li><strong>Premium Campaign ($10,000+)</strong> - Complete ad campaign with multiple formats, professional actors, advanced effects, 4-week production</li>
+                            <li><strong>Product Demo Series ($3,500)</strong> - Series of 5 product demonstration videos for e-commerce and social media</li>
+                        </ul>
+                        <p class="price-tag">Custom quotes based on project scope, locations, and production requirements</p>
+                    </div>
+                </div>
+                
+                <div class="videos-container">
+                    <h3>Advertisement Portfolio</h3>
+                    <div class="videos-grid">
+                        <!-- 8 ad videos -->
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Car Commercial">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Luxury Car Brand Commercial</h4>
+                                <p>Cinematic advertisement showcasing premium features and elegant design of luxury sedan.</p>
+                                <a href="https://youtube.com/watch?v=ad1" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fashion Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Fashion Brand Social Media Campaign</h4>
+                                <p>Dynamic social media ads featuring seasonal collection with urban backdrop.</p>
+                                <a href="https://youtube.com/watch?v=ad2" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tech Product Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Smartphone Launch Advertisement</h4>
+                                <p>Highlighting innovative features and cutting-edge technology of latest smartphone.</p>
+                                <a href="https://youtube.com/watch?v=ad3" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Food Commercial">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Restaurant Chain TV Commercial</h4>
+                                <p>Mouth-watering advertisement showcasing signature dishes and dining experience.</p>
+                                <a href="https://youtube.com/watch?v=ad4" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Fitness Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Fitness App Promotional Video</h4>
+                                <p>Motivational advertisement highlighting app features and transformation stories.</p>
+                                <a href="https://youtube.com/watch?v=ad5" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Travel Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Travel Agency Destination Advertisement</h4>
+                                <p>Captivating ad showcasing exotic destinations and unique travel experiences.</p>
+                                <a href="https://youtube.com/watch?v=ad6" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cosmetics Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Cosmetics Brand Social Media Ads</h4>
+                                <p>Series of short-form ads for social media platforms highlighting product benefits.</p>
+                                <a href="https://youtube.com/watch?v=ad7" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="video-item">
+                            <div class="video-thumbnail">
+                                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Real Estate Ad">
+                                <div class="play-icon">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                            <div class="video-info">
+                                <h4>Luxury Real Estate Virtual Tour</h4>
+                                <p>Immersive advertisement showcasing premium property with drone footage and walkthrough.</p>
+                                <a href="https://youtube.com/watch?v=ad8" target="_blank" class="watch-btn">Watch Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section class="contact section" id="contact">
@@ -880,6 +1978,42 @@
             });
         });
         
+        // Portfolio Item Click - Open Modal
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const projectId = item.getAttribute('data-project');
+                const modal = document.getElementById(`${projectId}-modal`);
+                
+                if (modal) {
+                    modal.style.display = 'block';
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+        
+        // Close Modal
+        const closeModalButtons = document.querySelectorAll('.close-modal');
+        
+        closeModalButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const modalId = button.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                
+                if (modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
         // Form Submission
         const contactForm = document.getElementById('contactForm');
         
@@ -894,12 +2028,15 @@
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
                 header.style.padding = '10px 0';
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.5)';
             } else {
                 header.style.padding = '20px 0';
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
             }
         });
+        
+        // Initialize with Travel Vlog modal for demonstration
+        // In actual use, modals would be opened by clicking portfolio items
     </script>
 </body>
 </html>
